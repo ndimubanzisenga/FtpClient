@@ -12,8 +12,8 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
     m_connected = false;
 
-    ui->uploadUrlLineEdit->setText("ftp://measx.biz/Euromap63Test/");
-    m_ftp = new FtpClient("ftp://measx.biz/Euromap63Test/",  "f00a951f", "vCvLU9EMJg6x8dur");
+    ui->uploadUrlLineEdit->setText("");
+    m_ftp = new FtpClient("",  "", "");
     if (!m_ftp->init()) {
         qDebug() << "Could not initialize FTP connection!";
         return;
